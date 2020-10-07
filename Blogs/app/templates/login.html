@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+
+<form action="" method="POST" id="loginForm">
+    <div id="container">
+        <h1>LOG IN</h1>
+        <br />
+        Email:
+        <input type="text" id="email" name="email" required autocomplete="off" />
+        <br />
+        <spam id="spam1"></spam>
+        Password:
+        <input type="password" name="password" required autocomplete="off" /> <br />
+        <spam>{{ error }}</spam>
+        <input type="submit" value="LOG IN" />
+    </div>
+</form>
+{% endblock %}

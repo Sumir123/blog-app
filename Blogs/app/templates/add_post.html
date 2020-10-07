@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %} {% if g.user %}
+<form action="" method="POST">
+  <div id="container">
+    <h1>ADD POST</h1>
+    <br />
+    Title:
+    <input type="text" id="title" name="title" required autocomplete="off" />
+    <br />
+    Description:
+    <textarea
+      id="describe"
+      name="description"
+      rows="10"
+      cols="30"
+      required
+      autocomplete="off"
+    ></textarea>
+    <br />
+    <input type="submit" value="ADD POST" />
+  </div>
+</form>
+{% else %}
+<label>Please Log in to access this page.</label><br />
+{% endif %} {% endblock %}

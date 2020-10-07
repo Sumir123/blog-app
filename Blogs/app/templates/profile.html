@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %} {% if g.user %}
+
+
+<div class="profile-content">
+    <div class="profile-row">
+        <label class="label">Name</label>
+        <label class="details">{{ users.username }}</label>
+    </div>
+    <div class="profile-row">
+        <label class="label">E-mail</label>
+        <label class="details">{{ users.email }}</label>
+    </div>
+    <div class="profile-row">
+        <label class="label">User ID</label>
+        <label class="details">{{ users.id }}</label>
+    </div>
+</div>
+
+{% else %}
+<h2>Please Log in</h2>
+<br> {% endif %} {% endblock %}

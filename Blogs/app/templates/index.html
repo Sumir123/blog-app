@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% if g.user %}
+<label>Loged in:{{ g.user }}</label><br />
+<h2>ALL POSTS</h2>
+<br />
+<div id="post">
+    {% for postt in post %}
+    <div id="{{ postt.id }}" class="id" data-id="{{ postt.id }}">
+        <h5 id="post_title">{{postt.title }}</h5>
+        <p id="post_username">written by: {{ postt.username}}</p>
+        <p id="post_description">{{ postt.description}}</p>
+        <button class="post_delete">
+      Delete
+    </button>
+        <a id="post_edit" href="/post/edit/{{ postt.id }}">Edit</a>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<div class="nopost">No more Post</div>
+{% else %}
+<h2>Please Log in</h2>
+<br /> {% endif %} {% endblock %}

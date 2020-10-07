@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="" method="POST">
+        <div id='signup_container'>
+                <H1>SIGN UP </H1> <br>
+                Username:<input type="text" id="username" name="username" required autocomplete="off"> <br>
+                Email: <input type="text" id="email" name="email" required autocomplete="off"> <br>
+                <spam id='spam1'></spam>
+                Password: <input type="password" name="password" required autocomplete="off"> <br>
+                <spam id='spam2'></spam>
+                <input type="submit" value="SIGN UP">
+        </div>
+</form>
+{% endblock %}

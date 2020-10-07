@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+
+<form action="/post/edit/{{ post.id }}" method="POST">
+  <div id="container">
+    <h1>Edit</h1>
+    <br />
+    Title:
+    <input type="text" id="title" name="title" autocomplete="off" value="{{ post.title }}" required >
+    <br />
+    Description:
+    <textarea
+      id="describe"
+      name="description" 
+      rows="10"
+      cols="30"
+      autocomplete="off"
+      required
+    >{{ post.description }}</textarea>
+    <br />
+    <input type="submit" value="UPDATE" />
+  </div>
+</form>
+{% endblock %}
